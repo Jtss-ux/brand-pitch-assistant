@@ -16,6 +16,3 @@ Writing personalized outreach emails to hundreds of brands is incredibly tedious
 
 ## How it Works
 The user inputs a brand URL and their own product details into the frontend. The backend fetches high-level context about the target brand and pipes it into an engineered prompt for the LLM. The generated pitch is streamed back to the UI, where it can be edited, copied, and sent.
-
-## Screenshots
-*(Add screenshots of your app here!)*
