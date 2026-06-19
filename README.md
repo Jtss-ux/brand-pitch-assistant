@@ -1,42 +1,21 @@
 # Brand Pitch Assistant
 
-Personal AI assistant for creator brand outreach. It stores your creator profile, brand contacts, AI-generated pitch drafts, and Gmail OAuth tokens locally.
+> Built for Hack Club #beest!
 
-## Setup
+## Description
+A full-stack AI workflow tool designed to automate and hyper-personalize sponsorship and marketing pitches. It takes basic inputs about a brand and a product, and generates highly tailored, professional email pitches to increase conversion rates.
 
-```bash
-npm install
-cp .env.example .env.local
-npm run dev
-```
+## Motivation
+Writing personalized outreach emails to hundreds of brands is incredibly tedious and time-consuming. I wanted to build an automated pipeline that scales my outreach without sacrificing the personalized touch that actually gets replies.
 
-Open `http://localhost:3000`.
+## Tech Stack
+* Next.js (React)
+* TypeScript
+* Vercel (Hosting)
+* LLM APIs (OpenAI)
 
-## Gmail OAuth
+## How it Works
+The user inputs a brand URL and their own product details into the frontend. The backend fetches high-level context about the target brand and pipes it into an engineered prompt for the LLM. The generated pitch is streamed back to the UI, where it can be edited, copied, and sent.
 
-Create a Google Cloud OAuth client and set:
-
-```text
-GOOGLE_CLIENT_ID=
-GOOGLE_CLIENT_SECRET=
-APP_URL=http://localhost:3000
-```
-
-Authorized redirect URI:
-
-```text
-http://localhost:3000/api/auth/google/callback
-```
-
-The app requests Gmail scopes for sending and reading message metadata. It does not need your email password.
-
-## OpenAI
-
-Set `OPENAI_API_KEY` for AI-generated pitches. Without it, the app uses a deterministic pitch template.
-
-## Safety Defaults
-
-- The app drafts first.
-- You approve each send.
-- Follow-ups are tracked as due items; the app does not silently blast emails.
-- Data is stored locally in `data/store.json`.
+## Screenshots
+*(Add screenshots of your app here!)*
